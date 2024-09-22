@@ -2,7 +2,7 @@ pipeline {
  agent any
  environment {
    BRANCH_NAME = 'main'
-   GIT_URL = 'https://github.com/Tinaofori/awscicd.git' 
+   GIT_URL = 'https:/github.com/Tinaofori/awscicd.git' 
    IMAGE_TAG = 'Tinaofori/awscicd'
    IMAGE_VERSION = ${BUILD_NUMBER}
     }
