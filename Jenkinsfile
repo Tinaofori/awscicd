@@ -4,7 +4,7 @@ pipeline {
    BRANCH_NAME = 'main'
    GIT_URL = 'https:/github.com/Tinaofori/awscicd.git' 
    IMAGE_TAG = 'Tinaofori/awscicd'
-   IMAGE_VERSION = ${BUILD_NUMBER}
+   IMAGE_VERSION = "${BUILD_NUMBER}"
     }
   stages {
    stage('git checkout'){
@@ -12,11 +12,13 @@ pipeline {
       git branch: "${BRANCH_NAME}", url: "${GIT_URL}"  
     }
    }
+   /*
    stage('docker build'){
     steps{
         sh 'docker build -t "${IMAGE_TAG}:${IMAGE_VERSION}" .'
         sh 'docker images'
     }
    }
+   */
   }
 }
